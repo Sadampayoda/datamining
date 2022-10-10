@@ -484,15 +484,71 @@ yaitu untuk melakukan perhitungan secara matematika dan mendefinisikan fungsi ma
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">KeyboardInterrupt</span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="n">d5df0069828e</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.7/dist-packages/google/colab/drive.py</span> in <span class="ni">mount</span><span class="nt">(mountpoint, force_remount, timeout_ms, readonly)</span>
+<span class="g g-Whitespace">    </span><span class="mi">104</span>       <span class="n">timeout_ms</span><span class="o">=</span><span class="n">timeout_ms</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">105</span>       <span class="n">ephemeral</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="ne">--&gt; </span><span class="mi">106</span>       <span class="n">readonly</span><span class="o">=</span><span class="n">readonly</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">107</span> 
+<span class="g g-Whitespace">    </span><span class="mi">108</span> 
+
+<span class="nn">/usr/local/lib/python3.7/dist-packages/google/colab/drive.py</span> in <span class="ni">_mount</span><span class="nt">(mountpoint, force_remount, timeout_ms, ephemeral, readonly)</span>
+<span class="g g-Whitespace">    </span><span class="mi">123</span>   <span class="k">if</span> <span class="n">ephemeral</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">124</span>     <span class="n">_message</span><span class="o">.</span><span class="n">blocking_request</span><span class="p">(</span>
+<span class="ne">--&gt; </span><span class="mi">125</span>         <span class="s1">&#39;request_auth&#39;</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;authType&#39;</span><span class="p">:</span> <span class="s1">&#39;dfs_ephemeral&#39;</span><span class="p">},</span> <span class="n">timeout_sec</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">126</span> 
+<span class="g g-Whitespace">    </span><span class="mi">127</span>   <span class="n">mountpoint</span> <span class="o">=</span> <span class="n">_os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">mountpoint</span><span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.7/dist-packages/google/colab/_message.py</span> in <span class="ni">blocking_request</span><span class="nt">(request_type, request, timeout_sec, parent)</span>
+<span class="g g-Whitespace">    </span><span class="mi">169</span>   <span class="n">request_id</span> <span class="o">=</span> <span class="n">send_request</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">170</span>       <span class="n">request_type</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">parent</span><span class="p">,</span> <span class="n">expect_reply</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">171</span>   <span class="k">return</span> <span class="n">read_reply_from_input</span><span class="p">(</span><span class="n">request_id</span><span class="p">,</span> <span class="n">timeout_sec</span><span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.7/dist-packages/google/colab/_message.py</span> in <span class="ni">read_reply_from_input</span><span class="nt">(message_id, timeout_sec)</span>
+<span class="g g-Whitespace">     </span><span class="mi">95</span>     <span class="n">reply</span> <span class="o">=</span> <span class="n">_read_next_input_message</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">96</span>     <span class="k">if</span> <span class="n">reply</span> <span class="o">==</span> <span class="n">_NOT_READY</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">reply</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">97</span>       <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.025</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">98</span>       <span class="k">continue</span>
+<span class="g g-Whitespace">     </span><span class="mi">99</span>     <span class="k">if</span> <span class="p">(</span><span class="n">reply</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;type&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;colab_reply&#39;</span> <span class="ow">and</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">cd</span> /content/drive/MyDrive/datamining/tugas/
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/content/drive/MyDrive/datamining/tugas
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#menampilkan data</span>
-<span class="n">dt</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/AliGhufron-28/datamaining/main/HousingPrices-Amsterdam-August-2021.csv&quot;</span><span class="p">)</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/content/drive/MyDrive/datamining/tugas/pseudo_facebook.csv&quot;</span><span class="p">)</span>
 <span class="n">dt</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-96201d5f-d5ec-46de-9435-7b1833840ace">
+  <div id="df-7d45f7d1-be36-4ecf-9160-92304c9884db">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -512,71 +568,113 @@ yaitu untuk melakukan perhitungan secara matematika dan mendefinisikan fungsi ma
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Unnamed: 0</th>
-      <th>Address</th>
-      <th>Zip</th>
-      <th>Price</th>
-      <th>Area</th>
-      <th>Room</th>
-      <th>Lon</th>
-      <th>Lat</th>
+      <th>userid</th>
+      <th>age</th>
+      <th>dob_day</th>
+      <th>dob_year</th>
+      <th>dob_month</th>
+      <th>gender</th>
+      <th>tenure</th>
+      <th>friend_count</th>
+      <th>friendships_initiated</th>
+      <th>likes</th>
+      <th>likes_received</th>
+      <th>mobile_likes</th>
+      <th>mobile_likes_received</th>
+      <th>www_likes</th>
+      <th>www_likes_received</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>1</td>
-      <td>Blasiusstraat 8 2, Amsterdam</td>
-      <td>1091 CR</td>
-      <td>685000.0</td>
-      <td>64</td>
-      <td>3</td>
-      <td>4.907736</td>
-      <td>52.356157</td>
+      <td>2094382</td>
+      <td>14</td>
+      <td>19</td>
+      <td>1999</td>
+      <td>11</td>
+      <td>male</td>
+      <td>266.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>1</th>
+      <td>1192601</td>
+      <td>14</td>
       <td>2</td>
-      <td>Kromme Leimuidenstraat 13 H, Amsterdam</td>
-      <td>1059 EL</td>
-      <td>475000.0</td>
-      <td>60</td>
-      <td>3</td>
-      <td>4.850476</td>
-      <td>52.348586</td>
+      <td>1999</td>
+      <td>11</td>
+      <td>female</td>
+      <td>6.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>3</td>
-      <td>Zaaiersweg 11 A, Amsterdam</td>
-      <td>1097 SM</td>
-      <td>850000.0</td>
-      <td>109</td>
-      <td>4</td>
-      <td>4.944774</td>
-      <td>52.343782</td>
+      <td>2083884</td>
+      <td>14</td>
+      <td>16</td>
+      <td>1999</td>
+      <td>11</td>
+      <td>male</td>
+      <td>13.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>4</td>
-      <td>Tenerifestraat 40, Amsterdam</td>
-      <td>1060 TH</td>
-      <td>580000.0</td>
-      <td>128</td>
-      <td>6</td>
-      <td>4.789928</td>
-      <td>52.343712</td>
+      <td>1203168</td>
+      <td>14</td>
+      <td>25</td>
+      <td>1999</td>
+      <td>12</td>
+      <td>female</td>
+      <td>93.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>5</td>
-      <td>Winterjanpad 21, Amsterdam</td>
-      <td>1036 KN</td>
-      <td>720000.0</td>
-      <td>138</td>
-      <td>5</td>
-      <td>4.902503</td>
-      <td>52.410538</td>
+      <td>1733186</td>
+      <td>14</td>
+      <td>4</td>
+      <td>1999</td>
+      <td>12</td>
+      <td>male</td>
+      <td>82.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>...</th>
@@ -588,67 +686,109 @@ yaitu untuk melakukan perhitungan secara matematika dan mendefinisikan fungsi ma
       <td>...</td>
       <td>...</td>
       <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
     </tr>
     <tr>
-      <th>919</th>
-      <td>920</td>
-      <td>Ringdijk, Amsterdam</td>
-      <td>1097 AE</td>
-      <td>750000.0</td>
-      <td>117</td>
-      <td>1</td>
-      <td>4.927757</td>
-      <td>52.354173</td>
-    </tr>
-    <tr>
-      <th>920</th>
-      <td>921</td>
-      <td>Kleine Beerstraat 31, Amsterdam</td>
-      <td>1033 CP</td>
-      <td>350000.0</td>
-      <td>72</td>
-      <td>3</td>
-      <td>4.890612</td>
-      <td>52.414587</td>
-    </tr>
-    <tr>
-      <th>921</th>
-      <td>922</td>
-      <td>Stuyvesantstraat 33 II, Amsterdam</td>
-      <td>1058 AK</td>
-      <td>350000.0</td>
-      <td>51</td>
-      <td>3</td>
-      <td>4.856935</td>
-      <td>52.363256</td>
-    </tr>
-    <tr>
-      <th>922</th>
-      <td>923</td>
-      <td>John Blankensteinstraat 51, Amsterdam</td>
-      <td>1095 MB</td>
-      <td>599000.0</td>
-      <td>113</td>
+      <th>98998</th>
+      <td>1268299</td>
+      <td>68</td>
       <td>4</td>
-      <td>4.965731</td>
-      <td>52.375268</td>
+      <td>1945</td>
+      <td>4</td>
+      <td>female</td>
+      <td>541.0</td>
+      <td>2118</td>
+      <td>341</td>
+      <td>3996</td>
+      <td>18089</td>
+      <td>3505</td>
+      <td>11887</td>
+      <td>491</td>
+      <td>6202</td>
     </tr>
     <tr>
-      <th>923</th>
-      <td>924</td>
-      <td>S. F. van Ossstraat 334, Amsterdam</td>
-      <td>1068 JS</td>
-      <td>300000.0</td>
-      <td>79</td>
+      <th>98999</th>
+      <td>1256153</td>
+      <td>18</td>
+      <td>12</td>
+      <td>1995</td>
+      <td>3</td>
+      <td>female</td>
+      <td>21.0</td>
+      <td>1968</td>
+      <td>1720</td>
+      <td>4401</td>
+      <td>13412</td>
+      <td>4399</td>
+      <td>10592</td>
+      <td>2</td>
+      <td>2820</td>
+    </tr>
+    <tr>
+      <th>99000</th>
+      <td>1195943</td>
+      <td>15</td>
+      <td>10</td>
+      <td>1998</td>
+      <td>5</td>
+      <td>female</td>
+      <td>111.0</td>
+      <td>2002</td>
+      <td>1524</td>
+      <td>11959</td>
+      <td>12554</td>
+      <td>11959</td>
+      <td>11462</td>
+      <td>0</td>
+      <td>1092</td>
+    </tr>
+    <tr>
+      <th>99001</th>
+      <td>1468023</td>
+      <td>23</td>
+      <td>11</td>
+      <td>1990</td>
       <td>4</td>
-      <td>4.810678</td>
-      <td>52.355493</td>
+      <td>female</td>
+      <td>416.0</td>
+      <td>2560</td>
+      <td>185</td>
+      <td>4506</td>
+      <td>6516</td>
+      <td>4506</td>
+      <td>5760</td>
+      <td>0</td>
+      <td>756</td>
+    </tr>
+    <tr>
+      <th>99002</th>
+      <td>1397896</td>
+      <td>39</td>
+      <td>15</td>
+      <td>1974</td>
+      <td>5</td>
+      <td>female</td>
+      <td>397.0</td>
+      <td>2049</td>
+      <td>768</td>
+      <td>9410</td>
+      <td>12443</td>
+      <td>9410</td>
+      <td>9530</td>
+      <td>0</td>
+      <td>2913</td>
     </tr>
   </tbody>
 </table>
-<p>924 rows × 8 columns</p>
+<p>99003 rows × 15 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-96201d5f-d5ec-46de-9435-7b1833840ace')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-7d45f7d1-be36-4ecf-9160-92304c9884db')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -699,12 +839,12 @@ yaitu untuk melakukan perhitungan secara matematika dan mendefinisikan fungsi ma
 
       <script>
         const buttonEl =
-          document.querySelector('#df-96201d5f-d5ec-46de-9435-7b1833840ace button.colab-df-convert');
+          document.querySelector('#df-7d45f7d1-be36-4ecf-9160-92304c9884db button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-96201d5f-d5ec-46de-9435-7b1833840ace');
+          const element = document.querySelector('#df-7d45f7d1-be36-4ecf-9160-92304c9884db');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
