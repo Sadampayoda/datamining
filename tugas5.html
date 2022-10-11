@@ -52,6 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Library KNN" href="uts.html" />
     <link rel="prev" title="naive bayes Classifer(tugas 4)" href="tugas4.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -146,6 +147,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    K-Means Clustering (Tugas 5)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="uts.html">
+   Library KNN
   </a>
  </li>
 </ul>
@@ -392,7 +398,7 @@ untuk meminimalisasikan fungsi objective yang telah di set dalam proses clusteri
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-c8901f5a-3923-442f-9ac2-42f0990f93f7">
+  <div id="df-67c6b8e1-6655-484e-a3bd-a7dbd3d87788">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -463,7 +469,7 @@ untuk meminimalisasikan fungsi objective yang telah di set dalam proses clusteri
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-c8901f5a-3923-442f-9ac2-42f0990f93f7')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-67c6b8e1-6655-484e-a3bd-a7dbd3d87788')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -514,12 +520,12 @@ untuk meminimalisasikan fungsi objective yang telah di set dalam proses clusteri
 
       <script>
         const buttonEl =
-          document.querySelector('#df-c8901f5a-3923-442f-9ac2-42f0990f93f7 button.colab-df-convert');
+          document.querySelector('#df-67c6b8e1-6655-484e-a3bd-a7dbd3d87788 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-c8901f5a-3923-442f-9ac2-42f0990f93f7');
+          const element = document.querySelector('#df-67c6b8e1-6655-484e-a3bd-a7dbd3d87788');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -557,7 +563,7 @@ Algoritma K-Means</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-42d313ac-79bf-4c02-a29c-efb08cfb5434">
+  <div id="df-063d14a7-ae3b-43b1-aca4-540fd4629c92">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -665,7 +671,7 @@ Algoritma K-Means</p>
 </table>
 <p>150 rows × 4 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-42d313ac-79bf-4c02-a29c-efb08cfb5434')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-063d14a7-ae3b-43b1-aca4-540fd4629c92')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -716,12 +722,12 @@ Algoritma K-Means</p>
 
       <script>
         const buttonEl =
-          document.querySelector('#df-42d313ac-79bf-4c02-a29c-efb08cfb5434 button.colab-df-convert');
+          document.querySelector('#df-063d14a7-ae3b-43b1-aca4-540fd4629c92 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-42d313ac-79bf-4c02-a29c-efb08cfb5434');
+          const element = document.querySelector('#df-063d14a7-ae3b-43b1-aca4-540fd4629c92');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -776,9 +782,9 @@ Algoritma K-Means</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[5.006     , 3.428     , 1.462     , 0.246     ],
-       [6.58769231, 2.97230769, 5.36      , 1.90153846],
-       [5.65714286, 2.68571429, 4.06285714, 1.25714286]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[5.00784314, 3.40980392, 1.49215686, 0.2627451 ],
+       [6.08333333, 2.82738095, 4.69880952, 1.6047619 ],
+       [7.34      , 3.14666667, 6.19333333, 2.11333333]])
 </pre></div>
 </div>
 </div>
@@ -792,7 +798,7 @@ Algoritma K-Means</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-537ff3d4-fb96-4a03-a485-dd5acc42c571">
+  <div id="df-d51df767-b321-4403-95b5-8258671e13cc">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -864,7 +870,7 @@ Algoritma K-Means</p>
 </table>
 <p>150 rows × 1 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-537ff3d4-fb96-4a03-a485-dd5acc42c571')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-d51df767-b321-4403-95b5-8258671e13cc')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -915,12 +921,12 @@ Algoritma K-Means</p>
 
       <script>
         const buttonEl =
-          document.querySelector('#df-537ff3d4-fb96-4a03-a485-dd5acc42c571 button.colab-df-convert');
+          document.querySelector('#df-d51df767-b321-4403-95b5-8258671e13cc button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-537ff3d4-fb96-4a03-a485-dd5acc42c571');
+          const element = document.querySelector('#df-d51df767-b321-4403-95b5-8258671e13cc');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1314,6 +1320,13 @@ Algoritma K-Means</p>
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">naive bayes Classifer(tugas 4)</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="uts.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Library KNN</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>
