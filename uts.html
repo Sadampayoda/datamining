@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Library KNN &#8212; My sample book</title>
+    <title>UTS ( KNN &amp; Desision tree) &#8212; My sample book</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="K-Means Clustering (Tugas 5)" href="tugas5.html" />
+    <link rel="prev" title="Decision Tree (Tugas 6)" href="tugas6.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -148,9 +148,14 @@ const thebe_selector_output = ".output, .cell_output"
    K-Means Clustering (Tugas 5)
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tugas6.html">
+   Decision Tree (Tugas 6)
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Library KNN
+   UTS ( KNN &amp; Desision tree)
   </a>
  </li>
 </ul>
@@ -361,18 +366,25 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Library KNN
+   UTS ( KNN &amp; Desision tree)
   </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#library-desision-tree">
-   Library Desision tree
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ambil-data-set">
-   Ambil data set
-  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#library-knn">
+     Library KNN
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#library-desision-tree">
+     Library Desision tree
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ambil-data-set">
+     Ambil data set
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#kkn">
@@ -457,7 +469,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Library KNN</h1>
+                <h1>UTS ( KNN & Desision tree)</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -469,18 +481,25 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Library KNN
+   UTS ( KNN &amp; Desision tree)
   </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#library-desision-tree">
-   Library Desision tree
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ambil-data-set">
-   Ambil data set
-  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#library-knn">
+     Library KNN
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#library-desision-tree">
+     Library Desision tree
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ambil-data-set">
+     Ambil data set
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#kkn">
@@ -566,7 +585,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <p>#UTS</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="uts-knn-desision-tree">
+<h1>UTS ( KNN &amp; Desision tree)<a class="headerlink" href="#uts-knn-desision-tree" title="Permalink to this headline">#</a></h1>
 <p>Lakukan analisa terhadap data pada  <a class="reference external" href="https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Coimbra">https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Coimbra</a>  dengan menggunakan klasifikasi</p>
 <ul class="simple">
 <li><p>metode KNN</p></li>
@@ -574,7 +594,7 @@ title="Print to PDF"
 </ul>
 <p>Proses analisa dilaporkan dan diupload di github ( menggunakan jupyter book)</p>
 <section id="library-knn">
-<h1>Library KNN<a class="headerlink" href="#library-knn" title="Permalink to this headline">#</a></h1>
+<h2>Library KNN<a class="headerlink" href="#library-knn" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span> <span class="c1">#split dataset into train and test data</span>
@@ -587,7 +607,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="library-desision-tree">
-<h1>Library Desision tree<a class="headerlink" href="#library-desision-tree" title="Permalink to this headline">#</a></h1>
+<h2>Library Desision tree<a class="headerlink" href="#library-desision-tree" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -601,7 +621,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="ambil-data-set">
-<h1>Ambil data set<a class="headerlink" href="#ambil-data-set" title="Permalink to this headline">#</a></h1>
+<h2>Ambil data set<a class="headerlink" href="#ambil-data-set" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dt_iris</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/Sadampayoda/dataset-uts/main/dataR2.csv&quot;</span><span class="p">)</span>
@@ -611,7 +631,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-73ead74e-ca5d-466f-8780-4f54d9aae810">
+  <div id="df-cd681e66-4639-4f0d-848c-3e4a4e3e7316">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -712,7 +732,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-73ead74e-ca5d-466f-8780-4f54d9aae810')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-cd681e66-4639-4f0d-848c-3e4a4e3e7316')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -763,12 +783,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-73ead74e-ca5d-466f-8780-4f54d9aae810 button.colab-df-convert');
+          document.querySelector('#df-cd681e66-4639-4f0d-848c-3e4a4e3e7316 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-73ead74e-ca5d-466f-8780-4f54d9aae810');
+          const element = document.querySelector('#df-cd681e66-4639-4f0d-848c-3e4a4e3e7316');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -789,6 +809,7 @@ title="Print to PDF"
   </div>
 </div></div>
 </div>
+</section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="kkn">
 <h1>1. KKN<a class="headerlink" href="#kkn" title="Permalink to this headline">#</a></h1>
@@ -823,7 +844,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-5ea0e3b9-fdf5-4f01-983b-0a24e7781135">
+  <div id="df-5bcaaa61-89be-4eb6-9790-592cb3199313">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -918,7 +939,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-5ea0e3b9-fdf5-4f01-983b-0a24e7781135')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-5bcaaa61-89be-4eb6-9790-592cb3199313')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -969,12 +990,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-5ea0e3b9-fdf5-4f01-983b-0a24e7781135 button.colab-df-convert');
+          document.querySelector('#df-5bcaaa61-89be-4eb6-9790-592cb3199313 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-5ea0e3b9-fdf5-4f01-983b-0a24e7781135');
+          const element = document.querySelector('#df-5bcaaa61-89be-4eb6-9790-592cb3199313');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1122,7 +1143,7 @@ Name: Classification, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-663aa906-2523-4f3c-b6f7-0ec3937b9916">
+  <div id="df-efabd81f-22bf-4839-973b-219f4c997fe2">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1290,7 +1311,7 @@ Name: Classification, dtype: int64
 </table>
 <p>116 rows × 9 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-663aa906-2523-4f3c-b6f7-0ec3937b9916')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-efabd81f-22bf-4839-973b-219f4c997fe2')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1341,12 +1362,12 @@ Name: Classification, dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-663aa906-2523-4f3c-b6f7-0ec3937b9916 button.colab-df-convert');
+          document.querySelector('#df-efabd81f-22bf-4839-973b-219f4c997fe2 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-663aa906-2523-4f3c-b6f7-0ec3937b9916');
+          const element = document.querySelector('#df-efabd81f-22bf-4839-973b-219f4c997fe2');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1435,9 +1456,9 @@ Name: Classification, dtype: int64
  Text(0.09090909090909091, 0.5, &#39;X[7] &lt;= 3.281\ngini = 0.133\nsamples = 28\nvalue = [26, 2]&#39;),
  Text(0.045454545454545456, 0.35714285714285715, &#39;gini = 0.0\nsamples = 1\nvalue = [0, 1]&#39;),
  Text(0.13636363636363635, 0.35714285714285715, &#39;X[6] &lt;= 3.986\ngini = 0.071\nsamples = 27\nvalue = [26, 1]&#39;),
- Text(0.09090909090909091, 0.21428571428571427, &#39;X[3] &lt;= 3.793\ngini = 0.444\nsamples = 3\nvalue = [2, 1]&#39;),
- Text(0.045454545454545456, 0.07142857142857142, &#39;gini = 0.0\nsamples = 1\nvalue = [0, 1]&#39;),
- Text(0.13636363636363635, 0.07142857142857142, &#39;gini = 0.0\nsamples = 2\nvalue = [2, 0]&#39;),
+ Text(0.09090909090909091, 0.21428571428571427, &#39;X[2] &lt;= 82.5\ngini = 0.444\nsamples = 3\nvalue = [2, 1]&#39;),
+ Text(0.045454545454545456, 0.07142857142857142, &#39;gini = 0.0\nsamples = 2\nvalue = [2, 0]&#39;),
+ Text(0.13636363636363635, 0.07142857142857142, &#39;gini = 0.0\nsamples = 1\nvalue = [0, 1]&#39;),
  Text(0.18181818181818182, 0.21428571428571427, &#39;gini = 0.0\nsamples = 24\nvalue = [24, 0]&#39;),
  Text(0.18181818181818182, 0.5, &#39;gini = 0.0\nsamples = 1\nvalue = [0, 1]&#39;),
  Text(0.3181818181818182, 0.6428571428571429, &#39;X[1] &lt;= 30.027\ngini = 0.49\nsamples = 21\nvalue = [9, 12]&#39;),
@@ -1458,7 +1479,7 @@ Name: Classification, dtype: int64
  Text(0.6818181818181818, 0.07142857142857142, &#39;gini = 0.0\nsamples = 2\nvalue = [0, 2]&#39;),
  Text(0.7272727272727273, 0.21428571428571427, &#39;gini = 0.0\nsamples = 7\nvalue = [0, 7]&#39;),
  Text(0.9090909090909091, 0.5, &#39;X[7] &lt;= 10.109\ngini = 0.496\nsamples = 11\nvalue = [6, 5]&#39;),
- Text(0.8636363636363636, 0.35714285714285715, &#39;X[4] &lt;= 1.171\ngini = 0.278\nsamples = 6\nvalue = [1, 5]&#39;),
+ Text(0.8636363636363636, 0.35714285714285715, &#39;X[3] &lt;= 5.032\ngini = 0.278\nsamples = 6\nvalue = [1, 5]&#39;),
  Text(0.8181818181818182, 0.21428571428571427, &#39;gini = 0.0\nsamples = 1\nvalue = [1, 0]&#39;),
  Text(0.9090909090909091, 0.21428571428571427, &#39;gini = 0.0\nsamples = 5\nvalue = [0, 5]&#39;),
  Text(0.9545454545454546, 0.35714285714285715, &#39;gini = 0.0\nsamples = 5\nvalue = [5, 0]&#39;)]
@@ -1508,11 +1529,11 @@ Name: Classification, dtype: int64
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="tugas5.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="tugas6.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">K-Means Clustering (Tugas 5)</p>
+            <p class="prev-next-title">Decision Tree (Tugas 6)</p>
         </div>
     </a>
 </div>
