@@ -389,25 +389,8 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">arff</span><span class="o">.</span><span class="n">loadarff</span><span class="p">(</span><span class="s1">&#39;messidor_features.arff&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">arff</span><span class="o">.</span><span class="n">loadarff</span><span class="p">(</span><span class="s2">&quot;/content/drive/MyDrive/datamining/tugas/messidor_features.arff&quot;</span><span class="p">)</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">FileNotFoundError</span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mi">8</span><span class="n">b33ccfa1442</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">data</span> <span class="o">=</span> <span class="n">arff</span><span class="o">.</span><span class="n">loadarff</span><span class="p">(</span><span class="s1">&#39;messidor_features.arff&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/scipy/io/arff/arffread.py</span> in <span class="ni">loadarff</span><span class="nt">(f)</span>
-<span class="g g-Whitespace">    </span><span class="mi">798</span>         <span class="n">ofile</span> <span class="o">=</span> <span class="n">f</span>
-<span class="g g-Whitespace">    </span><span class="mi">799</span>     <span class="k">else</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">800</span>         <span class="n">ofile</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="s1">&#39;rt&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">801</span>     <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">802</span>         <span class="k">return</span> <span class="n">_loadarff</span><span class="p">(</span><span class="n">ofile</span><span class="p">)</span>
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;messidor_features.arff&#39;
 </pre></div>
 </div>
 </div>
@@ -451,7 +434,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-704b5d38-bfa8-4b92-81a8-962036d6bbbb">
+  <div id="df-a0807f8b-d12e-4904-bdc0-93ace9e4f3e8">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -612,7 +595,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-704b5d38-bfa8-4b92-81a8-962036d6bbbb')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-a0807f8b-d12e-4904-bdc0-93ace9e4f3e8')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -663,12 +646,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-704b5d38-bfa8-4b92-81a8-962036d6bbbb button.colab-df-convert');
+          document.querySelector('#df-a0807f8b-d12e-4904-bdc0-93ace9e4f3e8 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-704b5d38-bfa8-4b92-81a8-962036d6bbbb');
+          const element = document.querySelector('#df-a0807f8b-d12e-4904-bdc0-93ace9e4f3e8');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -702,7 +685,7 @@ title="Print to PDF"
 </pre></div>
 </div>
 <div class="output text_html">
-  <div id="df-8e530527-2fed-4012-9c0c-3487c2aa2314">
+  <div id="df-56ac416c-22ea-48ea-8112-3b3db98c28d0">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -990,7 +973,7 @@ title="Print to PDF"
 </table>
 <p>1151 rows × 19 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-8e530527-2fed-4012-9c0c-3487c2aa2314')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-56ac416c-22ea-48ea-8112-3b3db98c28d0')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1041,12 +1024,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-8e530527-2fed-4012-9c0c-3487c2aa2314 button.colab-df-convert');
+          document.querySelector('#df-56ac416c-22ea-48ea-8112-3b3db98c28d0 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-8e530527-2fed-4012-9c0c-3487c2aa2314');
+          const element = document.querySelector('#df-56ac416c-22ea-48ea-8112-3b3db98c28d0');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
